@@ -1,0 +1,114 @@
+---
+import { ClientRouter } from 'astro:transitions';
+import '../styles/global.css';
+import site from '../data/site.json';
+
+interface Props {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+}
+
+const {
+  title = `${site.name} Setapak | Cozy Dining Since ${site.since} | ${site.nameZh}`,
+  description = 'Halal Muslim-friendly cafe in Setapak serving Western mains, pasta, rice bowls & signature waffles. Rated 4.8/5 by 1,100+ diners. Dine-in & delivery.',
+  ogImage = '/og-image.jpg',
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://aidelicious.com');
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalURL} />
+
+  <!-- Astro View Transitions — smooth cross-page morphing -->
+  <ClientRouter />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:url" content={canonicalURL} />
+  <meta property="og:type" content="restaurant" />
+  <meta property="og:locale" content="en_MY" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImage} />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- JSON-LD Restaurant Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": site.name,
+    "alternateName": site.nameZh,
+    "image": ogImage,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": site.address,
+      "addressLocality": "Setapak",
+      "addressRegion": "Kuala Lumpur",
+      "postalCode": "53300",
+      "addressCountry": "MY"
+    },
+    "telephone": site.phone,
+    "url": canonicalURL.origin,
+    "servesCuisine": ["Asian Fusion", "Western", "Malaysian"],
+    "priceRange": "$$",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "10:00",
+        "closes": "22:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday", "Sunday"],
+        "opens": "09:00",
+        "closes": "22:30"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": site.rating,
+      "reviewCount": site.reviewCount
+    }
+  })} />
+</head>
+<body class="min-h-screen bg-cream text-charcoal overflow-x-hidden">
+  <slot />
+
+  <!-- Scroll reveal observer — tiny, runs once per element -->
+  <script>
+    function initReveal() {
+      const els = document.querySelectorAll('[data-reveal]');
+      if (!els.length) return;
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add('is-visible');
+            observer.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      els.forEach((el) => observer.observe(el));
+    }
+    // Run on initial load
+    initReveal();
+    // Re-run after Astro view transition swaps
+    document.addEventListener('astro:after-swap', initReveal);
+  </script>
+</body>
+</html>

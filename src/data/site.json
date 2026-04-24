@@ -1,0 +1,35 @@
+{
+  "name": "Ai Delicious Cafe",
+  "nameZh": "爱品味",
+  "tagline": "Cozy comfort, served daily in Setapak.",
+  "taglineZh": "温馨美味，每一口都是回家的感觉。",
+  "since": 2019,
+  "address": "No. 22, Jalan 1/27A, Wangsa Maju, Setapak, 53300 Kuala Lumpur",
+  "phone": "+60123456789",
+  "whatsapp": "60123456789",
+  "email": "hello@aidelicious.com",
+  "hours": {
+    "monday": "10:00 AM – 10:00 PM",
+    "tuesday": "10:00 AM – 10:00 PM",
+    "wednesday": "10:00 AM – 10:00 PM",
+    "thursday": "10:00 AM – 10:00 PM",
+    "friday": "10:00 AM – 10:00 PM",
+    "saturday": "9:00 AM – 10:30 PM",
+    "sunday": "9:00 AM – 10:30 PM"
+  },
+  "socials": {
+    "instagram": "https://instagram.com/aideliciouscafe",
+    "facebook": "https://facebook.com/aideliciouscafe",
+    "tiktok": "https://tiktok.com/@aideliciouscafe"
+  },
+  "delivery": {
+    "foodpanda": "https://foodpanda.com.my",
+    "grabfood": "https://food.grab.com"
+  },
+  "maps": {
+    "embed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.6!2d101.7234!3d3.1894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc37a171e9e8f1%3A0x2ab2a8e4a7e3b8c5!2sSetapak%2C+Kuala+Lumpur!5e0!3m2!1sen!2smy!4v1700000000000",
+    "directions": "https://www.google.com/maps/search/Ai+Delicious+Cafe+Setapak+Kuala+Lumpur"
+  },
+  "rating": 4.8,
+  "reviewCount": 1185
+}

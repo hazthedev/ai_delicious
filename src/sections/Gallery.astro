@@ -1,0 +1,36 @@
+---
+const images = [
+  { src: '/images/interior/greenery-ceiling.jpg', alt: 'Lush greenery-draped ceiling at Ai Delicious Cafe', span: 'md:col-span-2 md:row-span-2' },
+  { src: '/images/interior/storefront.jpg', alt: 'Ai Delicious Cafe storefront sign', span: '' },
+  { src: '/images/interior/exterior.jpg', alt: 'Exterior view of Ai Delicious Cafe in Setapak', span: '' },
+  { src: '/images/interior/dining-area.jpg', alt: 'Bright open dining area with natural light', span: 'md:col-span-2' },
+];
+---
+
+<section class="py-20 md:py-28 bg-surface">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <!-- Section header -->
+    <div class="text-center mb-14 md:mb-20" data-reveal="up">
+      <p class="text-gold font-medium text-sm tracking-[0.2em] uppercase mb-3">The Space</p>
+      <h2 class="font-display text-3xl md:text-5xl text-charcoal leading-tight" style="font-variation-settings: 'opsz' 48;">
+        Pull back the curtain,<br class="hidden sm:block" /> take a seat.
+      </h2>
+    </div>
+
+    <!-- Asymmetric gallery grid — staggered fade -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-3 md:gap-4">
+      {images.map((img, i) => (
+        <div class={`relative overflow-hidden rounded-xl group cursor-pointer ${img.span}`} data-reveal="fade" data-reveal-delay={String(i + 1)}>
+          <img
+            src={img.src}
+            alt={img.alt}
+            class="absolute inset-0 w-full h-full object-cover gallery-img"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-charcoal/5 group-hover:bg-transparent transition-colors duration-700" />
+          <div class={`relative ${img.span.includes('row-span-2') ? 'aspect-square md:aspect-auto md:min-h-[400px]' : 'aspect-[4/3]'}`} />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

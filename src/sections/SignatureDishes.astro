@@ -1,0 +1,59 @@
+---
+const dishes = [
+  {
+    name: 'Grilled Chicken Chop',
+    description: 'Tender marinated thigh with black pepper sauce — our most-ordered dish.',
+    image: '/images/food/chicken-chop.jpg',
+  },
+  {
+    name: 'Creamy Carbonara',
+    description: 'Rich cream sauce, crispy chicken bacon, fresh herbs — pure comfort.',
+    image: '/images/food/carbonara.jpg',
+  },
+  {
+    name: 'Oreo Waffle',
+    description: 'Crispy Belgian waffle with crushed Oreos, chocolate drizzle & ice cream.',
+    image: '/images/food/oreo-waffle.jpg',
+  },
+];
+---
+
+<section class="py-20 md:py-28 bg-cream">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <!-- Section header -->
+    <div class="text-center mb-14 md:mb-20" data-reveal="up">
+      <p class="text-gold font-medium text-sm tracking-[0.2em] uppercase mb-3">Signature Favorites</p>
+      <h2 class="font-display text-3xl md:text-5xl text-charcoal leading-tight mb-4" style="font-variation-settings: 'opsz' 48;">
+        The ones they keep<br class="hidden sm:block" /> coming back for.
+      </h2>
+      <p class="text-taupe text-base md:text-lg max-w-md mx-auto">
+        Loved by 1,100+ diners. Three dishes that made us Setapak's quiet favorite.
+      </p>
+    </div>
+
+    <!-- Cards grid — staggered reveal -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+      {dishes.map((dish, i) => (
+        <a href="/menu" class="group relative aspect-[4/5] rounded-2xl overflow-hidden cursor-pointer card-hover block" data-reveal="scale" data-reveal-delay={String(i + 1)}>
+          <img
+            src={dish.image}
+            alt={dish.name}
+            class="absolute inset-0 w-full h-full object-cover img-zoom"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent overlay-fade group-hover:from-black/60 group-hover:via-black/10" />
+          <div class="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
+            <div class="text-slide">
+              <h3 class="font-display text-cream text-2xl md:text-3xl mb-2" style="font-variation-settings: 'opsz' 32;">
+                {dish.name}
+              </h3>
+              <p class="text-cream/70 text-sm leading-relaxed max-w-xs">
+                {dish.description}
+              </p>
+            </div>
+          </div>
+          <div class="absolute inset-0 rounded-2xl border-2 border-gold/0 group-hover:border-gold/25 transition-all duration-700 ease-[cubic-bezier(0.25,0.1,0.25,1)]" />
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
