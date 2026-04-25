@@ -2,11 +2,11 @@
 import site from '../data/site.json';
 ---
 
-<section class="py-20 md:py-28 bg-surface">
+<section class="py-16 md:py-28 lg:py-36 bg-surface">
   <div class="max-w-7xl mx-auto px-5 md:px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center">
-      <!-- Map -->
-      <div class="relative rounded-2xl overflow-hidden aspect-[4/3] bg-cream-dark" data-reveal="left">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-start">
+      {/* Map */}
+      <div class="relative rounded-2xl overflow-hidden aspect-[16/10] md:aspect-[4/3] bg-cream-dark img-frame" data-reveal="left">
         <iframe
           src={site.maps.embed}
           width="100%"
@@ -16,68 +16,69 @@ import site from '../data/site.json';
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
           title="Ai Delicious Cafe location on Google Maps"
-          class="absolute inset-0"
+          class="absolute inset-0 w-full h-full md:pointer-events-auto pointer-events-none"
         />
-        <div class="absolute inset-0 flex items-center justify-center bg-cream-dark pointer-events-none">
-          <div class="text-center text-taupe">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-12 h-12 mx-auto mb-3 text-gold">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-              <circle cx="12" cy="10" r="3"/>
-            </svg>
-            <p class="text-sm">Setapak, Kuala Lumpur</p>
-          </div>
-        </div>
       </div>
 
-      <!-- Info -->
-      <div data-reveal="right">
-        <p class="text-gold font-medium text-sm tracking-[0.2em] uppercase mb-3">Visit Us</p>
-        <h2 class="font-display text-3xl md:text-4xl text-charcoal leading-tight mb-8" style="font-variation-settings: 'opsz' 36;">
-          We'd love to<br />see you here.
+      {/* Info */}
+      <div class="lg:pt-8" data-reveal="right">
+        <p class="overline mb-5">Visit Us</p>
+        <h2 class="font-display text-3xl md:text-4xl lg:text-5xl text-charcoal leading-[1.1] tracking-tight mb-10" style="font-variation-settings: 'opsz' 48;">
+          We would love to<br /><span class="text-gold">see you here.</span>
         </h2>
 
-        <div class="space-y-6">
-          <div class="flex gap-4">
-            <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center text-gold">
+        <div class="space-y-8">
+          <div class="flex gap-5">
+            <div class="flex-shrink-0 w-11 h-11 rounded-xl bg-gold/8 flex items-center justify-center text-gold">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
             </div>
             <div>
-              <p class="font-medium text-charcoal text-sm mb-1">Address</p>
+              <p class="font-medium text-charcoal text-sm mb-1 tracking-wide">Address</p>
               <p class="text-taupe text-sm leading-relaxed">{site.address}</p>
             </div>
           </div>
 
-          <div class="flex gap-4">
-            <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center text-gold">
+          <div class="flex gap-5">
+            <div class="flex-shrink-0 w-11 h-11 rounded-xl bg-gold/8 flex items-center justify-center text-gold">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             </div>
             <div>
-              <p class="font-medium text-charcoal text-sm mb-1">Hours</p>
+              <p class="font-medium text-charcoal text-sm mb-1 tracking-wide">Hours</p>
               <p class="text-taupe text-sm">Mon – Fri: 10:00 AM – 10:00 PM</p>
               <p class="text-taupe text-sm">Sat – Sun: 9:00 AM – 10:30 PM</p>
             </div>
           </div>
 
-          <div class="flex gap-4">
-            <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center text-gold">
+          <div class="flex gap-5">
+            <div class="flex-shrink-0 w-11 h-11 rounded-xl bg-gold/8 flex items-center justify-center text-gold">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
             </div>
             <div>
-              <p class="font-medium text-charcoal text-sm mb-1">Phone</p>
-              <a href={`tel:${site.phone}`} class="text-taupe text-sm hover:text-gold transition-colors">{site.phone}</a>
+              <p class="font-medium text-charcoal text-sm mb-1 tracking-wide">Phone</p>
+              <a href={`tel:${site.phone}`} class="text-taupe text-sm hover:text-gold transition-colors duration-300">{site.phone}</a>
             </div>
           </div>
         </div>
 
-        <a
-          href={site.maps.directions}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn-elastic inline-flex items-center gap-2 mt-8 px-7 py-3.5 bg-charcoal text-cream font-semibold text-sm rounded-full hover:shadow-lg hover:shadow-charcoal/20"
-        >
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-4 h-4"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
-          Get Directions
-        </a>
+        <div class="flex flex-wrap gap-3 mt-10">
+          <a
+            href={site.maps.directions}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-elastic inline-flex items-center gap-2 px-7 py-3.5 bg-charcoal text-cream font-semibold text-sm rounded-full hover:shadow-lg hover:shadow-charcoal/15"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-4 h-4"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+            Get Directions
+          </a>
+          <a
+            href={`https://wa.me/${site.whatsapp}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-elastic inline-flex items-center gap-2 px-7 py-3.5 border border-charcoal/10 text-charcoal font-medium text-sm rounded-full hover:border-gold hover:text-gold transition-colors duration-300"
+          >
+            WhatsApp
+          </a>
+        </div>
       </div>
     </div>
   </div>

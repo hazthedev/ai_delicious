@@ -2,58 +2,143 @@
 const dishes = [
   {
     name: 'Grilled Chicken Chop',
-    description: 'Tender marinated thigh with black pepper sauce — our most-ordered dish.',
-    image: '/images/food/chicken-chop.jpg',
+    description: 'Marinated thigh, char-grilled and finished with house black pepper sauce. Our most-ordered dish for a reason.',
+    price: 'RM 22.90',
+    tag: 'Most Ordered',
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" class="w-10 h-10"><path d="M15.4 15.4c2.2-2.2 2.7-5.2 1.1-6.8s-4.6-1.1-6.8 1.1-2.7 5.2-1.1 6.8 4.6 1.1 6.8-1.1Z"/><path d="m8.9 15.1-5 5"/><path d="m3.3 20.7 2.2-2.2"/><path d="M16.8 8.2 20 5"/><path d="m19.5 4.5 1 1"/></svg>`,
   },
   {
     name: 'Creamy Carbonara',
-    description: 'Rich cream sauce, crispy chicken bacon, fresh herbs — pure comfort.',
-    image: '/images/food/carbonara.jpg',
+    description: 'Silky cream reduction, crispy chicken bacon, parmesan shavings, and a crack of black pepper. Pure comfort on a plate.',
+    price: 'RM 18.90',
+    tag: 'House Favourite',
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" class="w-10 h-10"><path d="M4 11h16"/><path d="M5 11a7 7 0 0 0 14 0"/><path d="M6 11V9a6 6 0 0 1 12 0v2"/><path d="M8 15h8"/><path d="M9 4c.8 1 .8 2 0 3"/><path d="M12 4c.8 1 .8 2 0 3"/><path d="M15 4c.8 1 .8 2 0 3"/></svg>`,
   },
   {
     name: 'Oreo Waffle',
-    description: 'Crispy Belgian waffle with crushed Oreos, chocolate drizzle & ice cream.',
-    image: '/images/food/oreo-waffle.jpg',
+    description: 'Belgian waffle, still warm from the iron. Topped with crushed Oreos, chocolate drizzle, and a scoop of vanilla.',
+    price: 'RM 16.90',
+    tag: 'Best for Sharing',
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" class="w-10 h-10"><rect x="5" y="5" width="14" height="14" rx="3"/><path d="M5 10h14"/><path d="M5 14h14"/><path d="M10 5v14"/><path d="M14 5v14"/></svg>`,
   },
 ];
 ---
 
-<section class="py-20 md:py-28 bg-cream">
+<section class="py-16 md:py-28 lg:py-36 bg-cream">
   <div class="max-w-7xl mx-auto px-5 md:px-8">
-    <!-- Section header -->
-    <div class="text-center mb-14 md:mb-20" data-reveal="up">
-      <p class="text-gold font-medium text-sm tracking-[0.2em] uppercase mb-3">Signature Favorites</p>
-      <h2 class="font-display text-3xl md:text-5xl text-charcoal leading-tight mb-4" style="font-variation-settings: 'opsz' 48;">
-        The ones they keep<br class="hidden sm:block" /> coming back for.
+    {/* Header */}
+    <div class="max-w-2xl mb-16 md:mb-24" data-reveal="up">
+      <p class="overline mb-5">Signature Favourites</p>
+      <h2 class="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal leading-[1.05] tracking-tight mb-6" style="font-variation-settings: 'opsz' 60;">
+        Three dishes,<br />
+        <span class="text-gold">a thousand repeats.</span>
       </h2>
-      <p class="text-taupe text-base md:text-lg max-w-md mx-auto">
-        Loved by 1,100+ diners. Three dishes that made us Setapak's quiet favorite.
+      <p class="body-editorial max-w-md">
+        These are the plates that built our name. Made the same way since 2019 — fresh, generous, and made with care.
       </p>
     </div>
 
-    <!-- Cards grid — staggered reveal -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-      {dishes.map((dish, i) => (
-        <a href="/menu" class="group relative aspect-[4/5] rounded-2xl overflow-hidden cursor-pointer card-hover block" data-reveal="scale" data-reveal-delay={String(i + 1)}>
-          <img
-            src={dish.image}
-            alt={dish.name}
-            class="absolute inset-0 w-full h-full object-cover img-zoom"
-          />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent overlay-fade group-hover:from-black/60 group-hover:via-black/10" />
-          <div class="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
+    {/* Editorial Grid */}
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
+      {/* Feature dish */}
+      <a href="/menu" class="group md:col-span-7 relative rounded-2xl overflow-hidden cursor-pointer card-hover block bg-charcoal" data-reveal="scale" data-reveal-delay="1">
+        <div class="aspect-[16/10] relative">
+          <div class="absolute inset-0 flex items-center justify-center bg-charcoal">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(250,246,240,0.08)_1px,transparent_0)] bg-[length:28px_28px]" />
+            <div class="absolute inset-x-0 top-0 h-24 md:h-32 bg-gradient-to-b from-gold/20 to-transparent" />
+            <div class="relative flex h-16 w-16 md:h-24 md:w-24 items-center justify-center rounded-xl md:rounded-2xl bg-cream/8 text-gold/60 ring-1 ring-cream/10 transition-all duration-500 group-hover:bg-gold group-hover:text-cream group-hover:scale-105">
+              <Fragment set:html={dishes[0].icon} />
+            </div>
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+        </div>
+        <div class="absolute top-4 left-4 md:top-5 md:left-5">
+          <span class="px-2.5 py-1 md:px-3 md:py-1.5 bg-gold/90 text-cream text-[9px] md:text-[10px] font-semibold uppercase tracking-[0.15em] rounded-full backdrop-blur-sm">
+            {dishes[0].tag}
+          </span>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 p-5 md:p-8">
+          <div class="text-slide">
+            <p class="text-cream/60 text-xs md:text-sm mb-1 md:mb-2">{dishes[0].price}</p>
+            <h3 class="font-display text-cream text-lg md:text-2xl lg:text-3xl mb-1 md:mb-2" style="font-variation-settings: 'opsz' 32;">
+              {dishes[0].name}
+            </h3>
+            <p class="text-cream/70 text-xs md:text-sm leading-relaxed max-w-sm hidden sm:block">
+              {dishes[0].description}
+            </p>
+          </div>
+        </div>
+        <div class="absolute inset-0 rounded-2xl border-2 border-gold/0 group-hover:border-gold/25 transition-all duration-700 ease-[cubic-bezier(0.25,0.1,0.25,1)]" />
+      </a>
+
+      {/* Side dishes */}
+      <div class="md:col-span-5 grid grid-cols-1 gap-4 md:gap-6">
+        <a href="/menu" class="group relative rounded-2xl overflow-hidden cursor-pointer card-hover block bg-charcoal" data-reveal="scale" data-reveal-delay="2">
+          <div class="aspect-[16/10] md:aspect-auto md:h-full relative">
+            <div class="absolute inset-0 flex items-center justify-center bg-charcoal">
+              <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(250,246,240,0.08)_1px,transparent_0)] bg-[length:28px_28px]" />
+              <div class="relative flex h-14 w-14 md:h-20 md:w-20 items-center justify-center rounded-xl md:rounded-2xl bg-cream/8 text-gold/60 ring-1 ring-cream/10 transition-all duration-500 group-hover:bg-gold group-hover:text-cream group-hover:scale-105">
+                <Fragment set:html={dishes[1].icon} />
+              </div>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+          </div>
+          <div class="absolute top-4 left-4 md:top-5 md:left-5">
+            <span class="px-2.5 py-1 md:px-3 md:py-1.5 bg-cream/90 text-charcoal text-[9px] md:text-[10px] font-semibold uppercase tracking-[0.15em] rounded-full backdrop-blur-sm">
+              {dishes[1].tag}
+            </span>
+          </div>
+          <div class="absolute bottom-0 left-0 right-0 p-5 md:p-6">
             <div class="text-slide">
-              <h3 class="font-display text-cream text-2xl md:text-3xl mb-2" style="font-variation-settings: 'opsz' 32;">
-                {dish.name}
+              <p class="text-cream/60 text-xs md:text-sm mb-1">{dishes[1].price}</p>
+              <h3 class="font-display text-cream text-base md:text-xl lg:text-2xl" style="font-variation-settings: 'opsz' 28;">
+                {dishes[1].name}
               </h3>
-              <p class="text-cream/70 text-sm leading-relaxed max-w-xs">
-                {dish.description}
-              </p>
             </div>
           </div>
           <div class="absolute inset-0 rounded-2xl border-2 border-gold/0 group-hover:border-gold/25 transition-all duration-700 ease-[cubic-bezier(0.25,0.1,0.25,1)]" />
         </a>
-      ))}
+
+        <a href="/menu" class="group relative rounded-2xl overflow-hidden cursor-pointer card-hover block bg-charcoal" data-reveal="scale" data-reveal-delay="3">
+          <div class="aspect-[16/10] md:aspect-auto md:h-full relative">
+            <div class="absolute inset-0 flex items-center justify-center bg-charcoal">
+              <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(250,246,240,0.08)_1px,transparent_0)] bg-[length:28px_28px]" />
+              <div class="relative flex h-14 w-14 md:h-20 md:w-20 items-center justify-center rounded-xl md:rounded-2xl bg-cream/8 text-gold/60 ring-1 ring-cream/10 transition-all duration-500 group-hover:bg-gold group-hover:text-cream group-hover:scale-105">
+                <Fragment set:html={dishes[2].icon} />
+              </div>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+          </div>
+          <div class="absolute top-4 left-4 md:top-5 md:left-5">
+            <span class="px-2.5 py-1 md:px-3 md:py-1.5 bg-cream/90 text-charcoal text-[9px] md:text-[10px] font-semibold uppercase tracking-[0.15em] rounded-full backdrop-blur-sm">
+              {dishes[2].tag}
+            </span>
+          </div>
+          <div class="absolute bottom-0 left-0 right-0 p-5 md:p-6">
+            <div class="text-slide">
+              <p class="text-cream/60 text-xs md:text-sm mb-1">{dishes[2].price}</p>
+              <h3 class="font-display text-cream text-base md:text-xl lg:text-2xl" style="font-variation-settings: 'opsz' 28;">
+                {dishes[2].name}
+              </h3>
+            </div>
+          </div>
+          <div class="absolute inset-0 rounded-2xl border-2 border-gold/0 group-hover:border-gold/25 transition-all duration-700 ease-[cubic-bezier(0.25,0.1,0.25,1)]" />
+        </a>
+      </div>
+    </div>
+
+    {/* Bottom link */}
+    <div class="mt-12 md:mt-16 text-center" data-reveal="up">
+      <a
+        href="/menu"
+        class="inline-flex items-center gap-2 text-charcoal font-medium text-sm tracking-wide hover:text-gold transition-colors duration-300 group"
+      >
+        <span class="relative">
+          View full menu
+          <span class="absolute left-0 -bottom-0.5 w-full h-px bg-current transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+        </span>
+        <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
     </div>
   </div>
 </section>

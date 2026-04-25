@@ -3,55 +3,57 @@ import reviews from '../data/reviews.json';
 import site from '../data/site.json';
 ---
 
-<section class="py-20 md:py-28 bg-charcoal text-cream relative overflow-hidden">
-  <div class="absolute top-0 left-0 w-64 h-64 bg-gold/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+<section class="py-16 md:py-28 lg:py-36 bg-charcoal text-cream relative overflow-hidden">
+  <div class="absolute top-0 left-0 w-72 h-72 bg-gold/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
   <div class="absolute bottom-0 right-0 w-96 h-96 bg-gold/5 rounded-full blur-3xl translate-x-1/3 translate-y-1/3" />
 
   <div class="relative max-w-7xl mx-auto px-5 md:px-8">
-    <!-- Header -->
-    <div class="text-center mb-14 md:mb-20" data-reveal="up">
-      <div class="inline-flex items-center gap-2 mb-6">
+    {/* Header */}
+    <div class="text-center mb-16 md:mb-24" data-reveal="up">
+      <div class="inline-flex items-center gap-1.5 mb-8">
         {[...Array(5)].map(() => (
-          <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-gold">
+          <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 text-gold">
             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
           </svg>
         ))}
       </div>
-      <h2 class="font-display text-3xl md:text-5xl text-cream leading-tight mb-4" style="font-variation-settings: 'opsz' 48;">
-        {site.rating} / 5 from {site.reviewCount.toLocaleString()}+ diners
+      <h2 class="font-display text-4xl md:text-5xl lg:text-6xl text-cream leading-[1.05] tracking-tight mb-5" style="font-variation-settings: 'opsz' 60;">
+        {site.rating} <span class="text-gold">/</span> 5
       </h2>
-      <p class="text-cream/50 text-base">on Google Reviews</p>
+      <p class="text-cream/40 text-sm tracking-wide">
+        From {site.reviewCount.toLocaleString()}+ diners on Google Reviews
+      </p>
     </div>
 
-    <!-- Review cards — staggered -->
+    {/* Review cards — editorial style */}
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
       {reviews.map((review, i) => (
         <div
-          class="relative p-8 rounded-2xl bg-cream/5 border border-cream/10 backdrop-blur-sm hover:border-gold/30 transition-all duration-500"
+          class="relative p-8 md:p-10 rounded-2xl bg-cream/4 border border-cream/8 backdrop-blur-sm hover:border-gold/20 transition-all duration-700"
           data-reveal="up"
           data-reveal-delay={String(i + 1)}
         >
-          <div class="absolute top-6 right-6 text-gold/20 font-display text-6xl leading-none">"</div>
+          <div class="absolute top-8 right-8 text-gold/15 font-display text-7xl leading-none select-none">"</div>
 
-          <div class="flex items-center gap-1 mb-4">
+          <div class="flex items-center gap-1 mb-6">
             {[...Array(review.rating)].map(() => (
-              <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 text-gold">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5 text-gold">
                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
               </svg>
             ))}
           </div>
 
-          <p class="text-cream/80 text-sm md:text-base leading-relaxed mb-6">
-            "{review.text}"
+          <p class="text-cream/75 text-[15px] leading-[1.75] mb-8 relative z-10">
+            {review.text}
           </p>
 
           <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center text-gold font-semibold text-sm">
+            <div class="w-9 h-9 rounded-full bg-gold/15 flex items-center justify-center text-gold font-semibold text-sm">
               {review.name.charAt(0)}
             </div>
             <div>
               <p class="text-cream font-medium text-sm">{review.name}</p>
-              <p class="text-cream/40 text-xs">{review.date}</p>
+              <p class="text-cream/30 text-xs">{review.date}</p>
             </div>
           </div>
         </div>

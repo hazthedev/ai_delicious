@@ -2,22 +2,25 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Navbar from '../components/Navbar';
 import HeroMotion from '../components/HeroMotion';
+import HeroCarousel from '../components/HeroCarousel';
 import SignatureDishes from '../sections/SignatureDishes.astro';
 import Gallery from '../sections/Gallery.astro';
 import ValueProps from '../sections/ValueProps.astro';
-import Reviews from '../sections/Reviews.astro';
+import ReviewCarousel from '../components/ReviewCarousel';
 import LocationTeaser from '../sections/LocationTeaser.astro';
 import Footer from '../components/Footer.astro';
 import WhatsAppFloat from '../components/WhatsAppFloat.astro';
 ---
 
 <BaseLayout>
-  <Navbar client:only="react" transition:persist />
-  <HeroMotion client:only="react" />
+  <Navbar client:load transition:persist />
+  <HeroCarousel client:load>
+    <HeroMotion client:load />
+  </HeroCarousel>
   <SignatureDishes />
   <Gallery />
   <ValueProps />
-  <Reviews />
+  <ReviewCarousel client:load />
   <LocationTeaser />
   <Footer />
   <WhatsAppFloat />

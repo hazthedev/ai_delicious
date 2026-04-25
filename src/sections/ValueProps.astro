@@ -1,35 +1,43 @@
 ---
 const props = [
   {
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-7 h-7"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`,
-    title: 'Halal Muslim-Friendly',
-    description: 'Every dish prepared with care. Bringing communities together, one meal at a time.',
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-6 h-6"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`,
+    title: 'Made with Care',
+    description: 'Every ingredient sourced thoughtfully. A welcoming table for every family, every friend group, every occasion.',
   },
   {
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-7 h-7"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`,
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-6 h-6"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`,
     title: 'Since 2019',
-    description: 'Five years of serving Setapak. Trusted by families, couples, and friends.',
+    description: 'Five years of perfecting recipes, training teams, and earning the trust of Setapak. We are not new — we are home.',
   },
   {
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-7 h-7"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`,
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-6 h-6"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`,
     title: 'Dine-in & Delivery',
-    description: 'Enjoy our cozy space or order from home. Available on FoodPanda & GrabFood.',
+    description: 'Stay for the ambience or take it home. Available on FoodPanda and GrabFood, delivered warm and intact.',
   },
 ];
 ---
 
-<section class="py-20 md:py-28 bg-cream relative overflow-hidden">
-  <div class="absolute inset-0 opacity-[0.02]" style="background-image: radial-gradient(circle at 1px 1px, var(--color-charcoal) 1px, transparent 0); background-size: 40px 40px;" />
+<section class="py-16 md:py-28 lg:py-36 bg-cream relative overflow-hidden">
+  <div class="absolute inset-0 opacity-[0.015]" style="background-image: radial-gradient(circle at 1px 1px, var(--color-charcoal) 1px, transparent 0); background-size: 48px 48px;" />
 
   <div class="relative max-w-7xl mx-auto px-5 md:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+    {/* Header */}
+    <div class="text-center max-w-xl mx-auto mb-16 md:mb-24" data-reveal="up">
+      <p class="overline mb-5">Why We Are Different</p>
+      <h2 class="font-display text-3xl md:text-4xl lg:text-5xl text-charcoal leading-[1.1] tracking-tight" style="font-variation-settings: 'opsz' 48;">
+        The details that<br /><span class="text-gold">matter most.</span>
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-10">
       {props.map((prop, i) => (
-        <div class="text-center group" data-reveal="up" data-reveal-delay={String(i + 1)}>
-          <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gold/10 text-gold mb-6 group-hover:bg-gold group-hover:text-cream transition-all duration-500" set:html={prop.icon} />
-          <h3 class="font-display text-xl md:text-2xl text-charcoal mb-3" style="font-variation-settings: 'opsz' 24;">
+        <div class="text-center md:text-left group" data-reveal="up" data-reveal-delay={String(i + 1)}>
+          <div class="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gold/8 text-gold mb-8 group-hover:bg-gold group-hover:text-cream transition-all duration-500" set:html={prop.icon} />
+          <h3 class="font-display text-xl md:text-2xl text-charcoal mb-4 tracking-tight" style="font-variation-settings: 'opsz' 24;">
             {prop.title}
           </h3>
-          <p class="text-taupe text-sm md:text-base leading-relaxed max-w-xs mx-auto">
+          <p class="body-editorial text-sm md:text-[15px] leading-[1.7] max-w-xs mx-auto md:mx-0">
             {prop.description}
           </p>
         </div>

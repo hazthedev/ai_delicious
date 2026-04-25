@@ -10,9 +10,9 @@ interface Props {
 }
 
 const {
-  title = `${site.name} Setapak | Cozy Dining Since ${site.since} | ${site.nameZh}`,
-  description = 'Halal Muslim-friendly cafe in Setapak serving Western mains, pasta, rice bowls & signature waffles. Rated 4.8/5 by 1,100+ diners. Dine-in & delivery.',
-  ogImage = '/og-image.jpg',
+  title = `${site.name} Setapak | Fusion Cafe Since ${site.since} | ${site.nameZh}`,
+  description = 'Western & Asian fusion cafe in Setapak. Grilled chicken chop, creamy carbonara, signature waffles & more. Rated 4.8/5 by 1,100+ diners. Dine-in & delivery.',
+  ogImage = '/images/hero-interior.jpg',
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://aidelicious.com');
@@ -88,6 +88,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://aidelici
   })} />
 </head>
 <body class="min-h-screen bg-cream text-charcoal overflow-x-hidden">
+  <!-- Editorial noise texture overlay -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
   <slot />
 
   <!-- Scroll reveal observer — tiny, runs once per element -->
@@ -102,7 +105,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://aidelici
             observer.unobserve(e.target);
           }
         });
-      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      }, { threshold: 0.08, rootMargin: '0px 0px -60px 0px' });
       els.forEach((el) => observer.observe(el));
     }
     // Run on initial load

@@ -4,24 +4,24 @@
     "items": [
       {
         "name": "Grilled Chicken Chop",
-        "description": "Tender marinated chicken thigh, grilled to perfection with black pepper sauce, fries and coleslaw",
+        "description": "Marinated thigh, char-grilled and finished with house black pepper sauce. Served with fries and coleslaw.",
         "price": 22.90,
         "image": "/images/food/chicken-chop.jpg",
-        "tags": ["halal", "popular"]
+        "tags": ["popular"]
       },
       {
         "name": "Fish & Chips",
-        "description": "Golden crispy battered fish fillet with thick-cut fries, lemon wedge and tartar sauce",
+        "description": "Golden crispy battered fillet with thick-cut fries, a lemon wedge, and tartar sauce on the side.",
         "price": 19.90,
         "image": "/images/food/fish-chips.jpg",
-        "tags": ["halal"]
+        "tags": []
       },
       {
         "name": "Classic Beef Burger",
-        "description": "Juicy beef patty with fresh lettuce, tomato, cheese and our house sauce, served with fries",
+        "description": "Juicy beef patty with fresh lettuce, tomato, melted cheese, and our house sauce. Served with fries.",
         "price": 24.90,
         "image": "/images/food/burger.jpg",
-        "tags": ["halal", "new"]
+        "tags": ["new"]
       }
     ]
   },
@@ -30,17 +30,17 @@
     "items": [
       {
         "name": "Creamy Carbonara",
-        "description": "Rich cream sauce with crispy chicken bacon, mushrooms and fresh herbs",
+        "description": "Silky cream reduction with crispy chicken bacon, sauteed mushrooms, and a shower of parmesan.",
         "price": 18.90,
         "image": "/images/food/carbonara.jpg",
-        "tags": ["halal", "popular"]
+        "tags": ["popular"]
       },
       {
         "name": "Pesto Chicken Pasta",
-        "description": "Spaghetti tossed in house-made basil pesto with grilled chicken and cherry tomatoes",
+        "description": "Spaghetti tossed in house-made basil pesto with grilled chicken breast and blistered cherry tomatoes.",
         "price": 19.90,
         "image": "/images/food/pesto-pasta.jpg",
-        "tags": ["halal"]
+        "tags": []
       }
     ]
   },
@@ -49,42 +49,42 @@
     "items": [
       {
         "name": "Korean Fried Chicken Rice",
-        "description": "Crispy fried chicken in sweet-spicy gochujang sauce with rice, egg and greens",
+        "description": "Crispy fried chicken glazed in sweet-spicy gochujang sauce, served over rice with egg and greens.",
         "price": 17.90,
         "image": "/images/food/korean-chicken-rice.jpg",
-        "tags": ["halal", "popular"]
+        "tags": ["popular"]
       },
       {
         "name": "Salted Egg Chicken Rice",
-        "description": "Crunchy fried chicken tossed in rich salted egg sauce, served over steamed rice",
+        "description": "Crunchy fried chicken tossed in rich, fragrant salted egg yolk sauce over steamed rice.",
         "price": 17.90,
         "image": "/images/food/crispy-chicken-rice.jpg",
-        "tags": ["halal", "popular"]
+        "tags": ["popular"]
       },
       {
         "name": "Chicken Chop Rice Set",
-        "description": "Grilled chicken with garlic fried rice, sunny side up and seasonal vegetables",
+        "description": "Grilled chicken with garlic fried rice, a sunny side up, and seasonal vegetables.",
         "price": 16.90,
         "image": "/images/food/chicken-rice.jpg",
-        "tags": ["halal"]
+        "tags": []
       },
       {
         "name": "Nasi Lemak Special",
-        "description": "Fragrant coconut rice with luncheon meat, sambal, spring onions and crispy anchovies",
+        "description": "Fragrant coconut rice with sambal, spring onions, crispy anchovies, and your choice of protein.",
         "price": 14.90,
         "image": "/images/food/nasi-lemak.jpg",
-        "tags": ["halal"]
+        "tags": []
       },
       {
-        "name": "Braised Pork Rice Set",
-        "description": "Traditional braised meat with pickled vegetables, egg and fragrant steamed rice on a wooden tray",
+        "name": "Braised Chicken Rice Set",
+        "description": "Traditional braised chicken with pickled vegetables, egg, and fragrant steamed rice on a wooden tray.",
         "price": 16.90,
         "image": "/images/food/rice-platter.jpg",
         "tags": []
       },
       {
-        "name": "Sausage Rice Bowl",
-        "description": "Sliced sausage with crispy shredded chicken, fresh greens and a sunny side up",
+        "name": "Chicken Sausage Rice Bowl",
+        "description": "Sliced chicken sausage with crispy shredded chicken, fresh greens, and a sunny side up.",
         "price": 15.90,
         "image": "/images/food/rice-sausage-bowl.jpg",
         "tags": []
@@ -96,7 +96,7 @@
     "items": [
       {
         "name": "Oreo Waffle",
-        "description": "Crispy Belgian waffle topped with crushed Oreos, chocolate drizzle, marshmallows and vanilla ice cream",
+        "description": "Belgian waffle, still warm from the iron. Topped with crushed Oreos, chocolate drizzle, and vanilla ice cream.",
         "price": 16.90,
         "image": "/images/food/oreo-waffle.jpg",
         "tags": ["popular"]
@@ -108,21 +108,21 @@
     "items": [
       {
         "name": "Butterfly Pea Latte",
-        "description": "Colour-changing butterfly pea flower tea layered with creamy milk — beautiful and refreshing",
+        "description": "Colour-changing butterfly pea flower tea layered with creamy milk. Beautiful, refreshing, and caffeine-free.",
         "price": 12.90,
         "image": "/images/food/butterfly-tea.jpg",
         "tags": ["popular"]
       },
       {
         "name": "Butterfly Boba Tea",
-        "description": "Butterfly pea tea with chewy tapioca pearls, a playful twist on a classic",
+        "description": "Butterfly pea tea with chewy tapioca pearls and a splash of cream. A playful twist on a classic.",
         "price": 13.90,
         "image": "/images/food/boba-tea.jpg",
         "tags": ["new"]
       },
       {
         "name": "Passion Fruit Soda",
-        "description": "House-made passion fruit syrup with sparkling soda and a gradient of tropical colours",
+        "description": "House-made passion fruit syrup with sparkling soda and a gradient of tropical colours.",
         "price": 11.90,
         "image": "/images/food/passion-soda.jpg",
         "tags": []
