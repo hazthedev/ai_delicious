@@ -10,12 +10,12 @@ interface Props {
 }
 
 const {
-  title = `${site.name} Setapak | Fusion Cafe Since ${site.since} | ${site.nameZh}`,
-  description = 'Western & Asian fusion cafe in Setapak. Grilled chicken chop, creamy carbonara, signature waffles & more. Rated 4.8/5 by 1,100+ diners. Dine-in & delivery.',
+  title = `${site.name} Setapak | Chinese Dumplings Since ${site.since} | ${site.nameZh}`,
+  description = 'Chinese-Muslim dumpling house in PV128 Setapak. Fried, steamed & boiled dumplings. Hand-pulled noodles. Rated 4.6/5. Open daily 11am–11pm.',
   ogImage = '/images/hero-interior.jpg',
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://aidelicious.com');
+const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://sunnygarden.my');
 ---
 
 <!DOCTYPE html>
@@ -44,6 +44,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://aidelici
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={ogImage} />
 
+  <!-- Google Fonts: Caveat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
@@ -64,20 +69,14 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://aidelici
     },
     "telephone": site.phone,
     "url": canonicalURL.origin,
-    "servesCuisine": ["Asian Fusion", "Western", "Malaysian"],
-    "priceRange": "$$",
+    "servesCuisine": ["Chinese", "Chinese-Muslim", "Dumplings"],
+    "priceRange": "$",
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "10:00",
-        "closes": "22:00"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Saturday", "Sunday"],
-        "opens": "09:00",
-        "closes": "22:30"
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "11:00",
+        "closes": "23:00"
       }
     ],
     "aggregateRating": {

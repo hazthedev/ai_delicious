@@ -1,105 +1,143 @@
 [
   {
-    "category": "Mains",
+    "category": "Dumplings (Fried)",
     "items": [
       {
-        "name": "Grilled Chicken Chop",
-        "description": "Marinated thigh, char-grilled and finished with house black pepper sauce. Served with fries and coleslaw.",
-        "price": 22.90,
-        "image": "/images/food/chicken-chop.jpg",
+        "name": "Fried Sam Xin Chicken Dumplings",
+        "description": "18 pieces deep-fried in a golden flower shape. Our signature — crispy edges, juicy centre. Served with chilli oil.",
+        "price": 18.00,
+        "image": "/images/food/fried-dumplings.jpg",
+        "tags": ["popular", "signature"]
+      },
+      {
+        "name": "Fried Beef Dumplings",
+        "description": "Pan-fried to golden perfection. 16 pieces with minced beef, spring onion, and ginger.",
+        "price": 16.00,
+        "image": "/images/food/beef-fried.jpg",
         "tags": ["popular"]
       },
       {
-        "name": "Fish & Chips",
-        "description": "Golden crispy battered fillet with thick-cut fries, a lemon wedge, and tartar sauce on the side.",
-        "price": 19.90,
-        "image": "/images/food/fish-chips.jpg",
-        "tags": []
-      },
-      {
-        "name": "Classic Beef Burger",
-        "description": "Juicy beef patty with fresh lettuce, tomato, melted cheese, and our house sauce. Served with fries.",
-        "price": 24.90,
-        "image": "/images/food/burger.jpg",
+        "name": "Fried Lamb Dumplings",
+        "description": "16 pieces with seasoned lamb and cumin. Pan-fried until the bottoms are crisp and caramelised.",
+        "price": 16.00,
+        "image": "/images/food/lamb-fried.jpg",
         "tags": ["new"]
       }
     ]
   },
   {
-    "category": "Pasta",
+    "category": "Dumplings (Steamed)",
     "items": [
       {
-        "name": "Creamy Carbonara",
-        "description": "Silky cream reduction with crispy chicken bacon, sauteed mushrooms, and a shower of parmesan.",
-        "price": 18.90,
-        "image": "/images/food/carbonara.jpg",
+        "name": "Steamed Lamb Gyoza",
+        "description": "16 pieces of soft, pillowy lamb dumplings. Steamed until translucent and tender.",
+        "price": 12.00,
+        "image": "/images/food/lamb-steamed.jpg",
         "tags": ["popular"]
       },
       {
-        "name": "Pesto Chicken Pasta",
-        "description": "Spaghetti tossed in house-made basil pesto with grilled chicken breast and blistered cherry tomatoes.",
-        "price": 19.90,
-        "image": "/images/food/pesto-pasta.jpg",
+        "name": "Steamed Chicken Dumplings",
+        "description": "16 pieces with minced chicken, chives, and a touch of sesame oil. Light and comforting.",
+        "price": 12.00,
+        "image": "/images/food/chicken-steamed.jpg",
+        "tags": ["popular"]
+      },
+      {
+        "name": "Steamed Beef Dumplings",
+        "description": "16 pieces. The beef filling stays juicy inside the delicate steamed wrapper.",
+        "price": 12.00,
+        "image": "/images/food/beef-steamed.jpg",
         "tags": []
       }
     ]
   },
   {
-    "category": "Rice Bowls",
+    "category": "Dumplings (Boiled)",
     "items": [
       {
-        "name": "Korean Fried Chicken Rice",
-        "description": "Crispy fried chicken glazed in sweet-spicy gochujang sauce, served over rice with egg and greens.",
-        "price": 17.90,
-        "image": "/images/food/korean-chicken-rice.jpg",
+        "name": "Boiled Chicken Dumplings in Soup",
+        "description": "16 pieces served in a light, fragrant chicken broth with spring onion and coriander.",
+        "price": 14.00,
+        "image": "/images/food/chicken-boiled.jpg",
+        "tags": []
+      },
+      {
+        "name": "Boiled Beef Dumplings in Soup",
+        "description": "16 pieces in a warming beef broth. Perfect for rainy evenings.",
+        "price": 14.00,
+        "image": "/images/food/beef-boiled.jpg",
+        "tags": []
+      },
+      {
+        "name": "Boiled Lamb Dumplings in Soup",
+        "description": "16 pieces in a rich lamb broth with goji berries and ginger. A northern Chinese classic.",
+        "price": 15.00,
+        "image": "/images/food/lamb-boiled.jpg",
+        "tags": ["new"]
+      }
+    ]
+  },
+  {
+    "category": "Hand-Pulled Noodles",
+    "items": [
+      {
+        "name": "Braised Chicken Kuan Xin Noodles",
+        "description": "Hand-pulled flat noodles in a rich braised chicken sauce with potatoes and peppers. A PV128 favourite.",
+        "price": 9.00,
+        "image": "/images/food/kuan-xin.jpg",
         "tags": ["popular"]
       },
       {
-        "name": "Salted Egg Chicken Rice",
-        "description": "Crunchy fried chicken tossed in rich, fragrant salted egg yolk sauce over steamed rice.",
-        "price": 17.90,
-        "image": "/images/food/crispy-chicken-rice.jpg",
+        "name": "La Mian Beef Soup",
+        "description": "Fresh hand-pulled noodles in a clear beef broth with sliced beef, radish, and coriander.",
+        "price": 12.00,
+        "image": "/images/food/la-mian-beef.jpg",
         "tags": ["popular"]
       },
       {
-        "name": "Chicken Chop Rice Set",
-        "description": "Grilled chicken with garlic fried rice, a sunny side up, and seasonal vegetables.",
-        "price": 16.90,
-        "image": "/images/food/chicken-rice.jpg",
-        "tags": []
-      },
-      {
-        "name": "Nasi Lemak Special",
-        "description": "Fragrant coconut rice with sambal, spring onions, crispy anchovies, and your choice of protein.",
-        "price": 14.90,
-        "image": "/images/food/nasi-lemak.jpg",
-        "tags": []
-      },
-      {
-        "name": "Braised Chicken Rice Set",
-        "description": "Traditional braised chicken with pickled vegetables, egg, and fragrant steamed rice on a wooden tray.",
-        "price": 16.90,
-        "image": "/images/food/rice-platter.jpg",
-        "tags": []
-      },
-      {
-        "name": "Chicken Sausage Rice Bowl",
-        "description": "Sliced chicken sausage with crispy shredded chicken, fresh greens, and a sunny side up.",
-        "price": 15.90,
-        "image": "/images/food/rice-sausage-bowl.jpg",
+        "name": "Mutton Vermicelli",
+        "description": "Glass noodles in a hearty mutton soup with preserved vegetables and spring onion.",
+        "price": 10.00,
+        "image": "/images/food/mutton-vermicelli.jpg",
         "tags": []
       }
     ]
   },
   {
-    "category": "Waffles",
+    "category": "Mutton & Lamb",
     "items": [
       {
-        "name": "Oreo Waffle",
-        "description": "Belgian waffle, still warm from the iron. Topped with crushed Oreos, chocolate drizzle, and vanilla ice cream.",
-        "price": 16.90,
-        "image": "/images/food/oreo-waffle.jpg",
+        "name": "Cumin Lamb Skewers (4 pcs)",
+        "description": "Grilled lamb skewers rubbed with cumin, chilli, and Sichuan pepper. A Xinjiang street-food classic.",
+        "price": 18.00,
+        "image": "/images/food/lamb-skewers.jpg",
         "tags": ["popular"]
+      },
+      {
+        "name": "Braised Mutton with Noodles",
+        "description": "Tender braised mutton served over hand-pulled noodles in a rich, aromatic gravy.",
+        "price": 16.00,
+        "image": "/images/food/braised-mutton.jpg",
+        "tags": []
+      }
+    ]
+  },
+  {
+    "category": "Rice Dishes",
+    "items": [
+      {
+        "name": "Sea Cucumber Rice",
+        "description": "Fragrant jasmine rice topped with braised sea cucumber, mushrooms, and a savoury gravy.",
+        "price": 14.00,
+        "image": "/images/food/sea-cucumber-rice.jpg",
+        "tags": []
+      },
+      {
+        "name": "Garlic Prawns with Rice",
+        "description": "Wok-fried prawns with garlic and spring onion, served with steamed jasmine rice.",
+        "price": 16.00,
+        "image": "/images/food/garlic-prawns.jpg",
+        "tags": []
       }
     ]
   },
@@ -107,24 +145,24 @@
     "category": "Drinks",
     "items": [
       {
-        "name": "Butterfly Pea Latte",
-        "description": "Colour-changing butterfly pea flower tea layered with creamy milk. Beautiful, refreshing, and caffeine-free.",
-        "price": 12.90,
-        "image": "/images/food/butterfly-tea.jpg",
+        "name": "Free Flow Chinese Tea",
+        "description": "Complimentary refills. Jasmine, chrysanthemum, or pu-erh. Served hot.",
+        "price": 0.00,
+        "image": "/images/food/chinese-tea.jpg",
         "tags": ["popular"]
       },
       {
-        "name": "Butterfly Boba Tea",
-        "description": "Butterfly pea tea with chewy tapioca pearls and a splash of cream. A playful twist on a classic.",
-        "price": 13.90,
-        "image": "/images/food/boba-tea.jpg",
-        "tags": ["new"]
+        "name": "Hawthorn Plum Juice",
+        "description": "Sweet-tart Chinese hawthorn juice. Refreshing and aids digestion after a dumpling feast.",
+        "price": 5.00,
+        "image": "/images/food/hawthorn-juice.jpg",
+        "tags": []
       },
       {
-        "name": "Passion Fruit Soda",
-        "description": "House-made passion fruit syrup with sparkling soda and a gradient of tropical colours.",
-        "price": 11.90,
-        "image": "/images/food/passion-soda.jpg",
+        "name": "Soy Milk (Hot or Cold)",
+        "description": "Fresh homemade soy milk. Silky, lightly sweetened. A northern Chinese breakfast staple.",
+        "price": 4.00,
+        "image": "/images/food/soy-milk.jpg",
         "tags": []
       }
     ]

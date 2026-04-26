@@ -1,25 +1,25 @@
 ---
 const dishes = [
   {
-    name: 'Grilled Chicken Chop',
-    description: 'Marinated thigh, char-grilled and finished with house black pepper sauce. Our most-ordered dish for a reason.',
-    price: 'RM 22.90',
-    tag: 'Most Ordered',
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" class="w-10 h-10"><path d="M15.4 15.4c2.2-2.2 2.7-5.2 1.1-6.8s-4.6-1.1-6.8 1.1-2.7 5.2-1.1 6.8 4.6 1.1 6.8-1.1Z"/><path d="m8.9 15.1-5 5"/><path d="m3.3 20.7 2.2-2.2"/><path d="M16.8 8.2 20 5"/><path d="m19.5 4.5 1 1"/></svg>`,
+    name: 'Fried Sam Xin Chicken Dumplings',
+    description: '18 pieces deep-fried in a golden flower shape. Crispy edges, juicy centre. Our signature since 2013.',
+    price: 'RM 18.00',
+    tag: 'Signature 招牌',
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" class="w-10 h-10 md:w-12 md:h-12"><circle cx="12" cy="12" r="3"/><path d="M12 2v4"/><path d="M12 18v4"/><path d="M4.93 4.93l2.83 2.83"/><path d="M16.24 16.24l2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="M4.93 19.07l2.83-2.83"/><path d="M16.24 7.76l2.83-2.83"/></svg>`,
   },
   {
-    name: 'Creamy Carbonara',
-    description: 'Silky cream reduction, crispy chicken bacon, parmesan shavings, and a crack of black pepper. Pure comfort on a plate.',
-    price: 'RM 18.90',
+    name: 'Steamed Lamb Gyoza',
+    description: '16 pieces of soft, pillowy lamb dumplings. Steamed until translucent and tender.',
+    price: 'RM 12.00',
+    tag: 'Best Value',
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" class="w-10 h-10 md:w-12 md:h-12"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>`,
+  },
+  {
+    name: 'Braised Chicken Kuan Xin Noodles',
+    description: 'Hand-pulled flat noodles in a rich braised chicken sauce. A PV128 favourite.',
+    price: 'RM 9.00',
     tag: 'House Favourite',
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" class="w-10 h-10"><path d="M4 11h16"/><path d="M5 11a7 7 0 0 0 14 0"/><path d="M6 11V9a6 6 0 0 1 12 0v2"/><path d="M8 15h8"/><path d="M9 4c.8 1 .8 2 0 3"/><path d="M12 4c.8 1 .8 2 0 3"/><path d="M15 4c.8 1 .8 2 0 3"/></svg>`,
-  },
-  {
-    name: 'Oreo Waffle',
-    description: 'Belgian waffle, still warm from the iron. Topped with crushed Oreos, chocolate drizzle, and a scoop of vanilla.',
-    price: 'RM 16.90',
-    tag: 'Best for Sharing',
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" class="w-10 h-10"><rect x="5" y="5" width="14" height="14" rx="3"/><path d="M5 10h14"/><path d="M5 14h14"/><path d="M10 5v14"/><path d="M14 5v14"/></svg>`,
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" class="w-10 h-10 md:w-12 md:h-12"><path d="M4 11h16"/><path d="M4 15h16"/><path d="M6 11V9a6 6 0 0 1 12 0v2"/></svg>`,
   },
 ];
 ---
@@ -27,14 +27,14 @@ const dishes = [
 <section class="py-16 md:py-28 lg:py-36 bg-cream">
   <div class="max-w-7xl mx-auto px-5 md:px-8">
     {/* Header */}
-    <div class="max-w-2xl mb-16 md:mb-24" data-reveal="up">
-      <p class="overline mb-5">Signature Favourites</p>
-      <h2 class="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal leading-[1.05] tracking-tight mb-6" style="font-variation-settings: 'opsz' 60;">
-        Three dishes,<br />
-        <span class="text-gold">a thousand repeats.</span>
+    <div class="max-w-2xl mb-12 md:mb-20" data-reveal="up">
+      <p class="overline mb-4 md:mb-5">Signature Favourites</p>
+      <h2 class="font-display text-3xl md:text-5xl lg:text-6xl text-charcoal leading-[1.05] tracking-tight mb-4 md:mb-6" style="font-variation-settings: 'opsz' 60;">
+        Three preparations.<br />
+        <span class="text-gold">One dumpling.</span>
       </h2>
-      <p class="body-editorial max-w-md">
-        These are the plates that built our name. Made the same way since 2019 — fresh, generous, and made with care.
+      <p class="body-editorial text-sm md:text-base max-w-md">
+        Pan-fried in a flower. Steamed soft and pillowy. Boiled tender for soup. Same fillings — chicken, beef, lamb. Pick how you want them today.
       </p>
     </div>
 
@@ -128,7 +128,7 @@ const dishes = [
     </div>
 
     {/* Bottom link */}
-    <div class="mt-12 md:mt-16 text-center" data-reveal="up">
+    <div class="mt-10 md:mt-14 text-center" data-reveal="up">
       <a
         href="/menu"
         class="inline-flex items-center gap-2 text-charcoal font-medium text-sm tracking-wide hover:text-gold transition-colors duration-300 group"

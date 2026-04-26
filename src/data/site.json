@@ -1,35 +1,35 @@
 {
-  "name": "Ai Delicious Cafe",
-  "nameZh": "爱品味",
-  "tagline": "Western & Asian fusion, handmade with care in Setapak since 2019.",
-  "taglineZh": "温馨美味，每一口都是回家的感觉。",
-  "since": 2019,
-  "address": "No. 22, Jalan 1/27A, Wangsa Maju, Setapak, 53300 Kuala Lumpur",
-  "phone": "+60123456789",
-  "whatsapp": "60123456789",
-  "email": "hello@aidelicious.com",
+  "name": "Sunny Garden",
+  "nameZh": "三合园",
+  "tagline": "Chinese dumplings, hidden in Setapak. Since 2013.",
+  "taglineZh": "三合园 — 清真饺子，始于2013",
+  "since": 2013,
+  "address": "G-06, PV128, 128 Jalan Genting Klang, 53300 Kuala Lumpur",
+  "phone": "+60163706356",
+  "whatsapp": "60163706356",
+  "email": "hello@sunnygarden.my",
   "hours": {
-    "monday": "10:00 AM – 10:00 PM",
-    "tuesday": "10:00 AM – 10:00 PM",
-    "wednesday": "10:00 AM – 10:00 PM",
-    "thursday": "10:00 AM – 10:00 PM",
-    "friday": "10:00 AM – 10:00 PM",
-    "saturday": "9:00 AM – 10:30 PM",
-    "sunday": "9:00 AM – 10:30 PM"
+    "monday": "11:00 AM – 11:00 PM",
+    "tuesday": "11:00 AM – 11:00 PM",
+    "wednesday": "11:00 AM – 11:00 PM",
+    "thursday": "11:00 AM – 11:00 PM",
+    "friday": "11:00 AM – 11:00 PM",
+    "saturday": "11:00 AM – 11:00 PM",
+    "sunday": "11:00 AM – 11:00 PM"
   },
   "socials": {
-    "instagram": "https://instagram.com/aideliciouscafe",
-    "facebook": "https://facebook.com/aideliciouscafe",
-    "tiktok": "https://tiktok.com/@aideliciouscafe"
+    "instagram": "https://instagram.com/sunnygardendumpling",
+    "facebook": "https://facebook.com/sunnygardendumpling",
+    "tiktok": "https://tiktok.com/@sunnygardendumpling"
   },
   "delivery": {
     "foodpanda": "https://foodpanda.com.my",
     "grabfood": "https://food.grab.com"
   },
   "maps": {
-    "embed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.6!2d101.7234!3d3.1894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc37a171e9e8f1%3A0x2ab2a8e4a7e3b8c5!2sSetapak%2C+Kuala+Lumpur!5e0!3m2!1sen!2smy!4v1700000000000",
-    "directions": "https://www.google.com/maps/search/Ai+Delicious+Cafe+Setapak+Kuala+Lumpur"
+    "embed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.6!2d101.7234!3d3.1894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc37a171e9e8f1%3A0x2ab2a8e4a7e3b8c5!2sPV128%2C+Jalan+Genting+Klang%2C+Setapak!5e0!3m2!1sen!2smy!4v1700000000000",
+    "directions": "https://www.google.com/maps/dir//Sunny+Garden+PV128+Setapak"
   },
-  "rating": 4.8,
-  "reviewCount": 1185
+  "rating": 4.6,
+  "reviewCount": 342
 }

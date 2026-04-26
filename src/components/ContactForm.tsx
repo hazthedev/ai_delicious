@@ -7,7 +7,7 @@ export default function ContactForm() {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const formspreeId = import.meta.env.PUBLIC_FORMSPREE_ID;
   const hasFormEndpoint = Boolean(formspreeId && formspreeId !== 'your-form-id');
-  const whatsappHref = `https://wa.me/${site.whatsapp}?text=${encodeURIComponent("Hi! I'd like to make a reservation or enquiry.")}`;
+  const whatsappHref = `https://wa.me/${site.whatsapp}?text=${encodeURIComponent("Hi! I'd like to make a reservation or enquiry about Sunny Garden.")}`;
 
   const validate = (form: FormData) => {
     const errs: Record<string, string> = {};

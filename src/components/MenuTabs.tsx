@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
-import { CakeSlice, Coffee, Soup, Utensils } from 'lucide-react';
+import { CakeSlice, Coffee, Flame, Leaf, Soup, Star, Utensils } from 'lucide-react';
 import menuData from '../data/menu.json';
 
-type Tag = 'popular' | 'new' | 'vegetarian';
+type Tag = 'popular' | 'new' | 'vegetarian' | 'signature';
 
 const categories = ['All', ...menuData.map((c) => c.category)];
 
@@ -11,22 +11,27 @@ const tagColors: Record<Tag, string> = {
   popular: 'bg-gold/15 text-gold-dark',
   new: 'bg-rose-50 text-rose-500',
   vegetarian: 'bg-emerald-50 text-emerald-600',
+  signature: 'bg-egg/20 text-charcoal',
 };
 
 const categoryIcons: Record<string, React.ElementType> = {
-  Mains: Utensils,
-  Pasta: Soup,
-  'Rice Bowls': Utensils,
-  Waffles: CakeSlice,
-  Drinks: Coffee,
+  'Dumplings (Fried)': Flame,
+  'Dumplings (Steamed)': Soup,
+  'Dumplings (Boiled)': Utensils,
+  'Hand-Pulled Noodles': Utensils,
+  'Mutton & Lamb': Flame,
+  'Rice Dishes': Utensils,
+  'Drinks': Coffee,
 };
 
 const categoryGradients: Record<string, string> = {
-  Mains: 'from-amber-100/60 via-cream-dark to-orange-50/40',
-  Pasta: 'from-emerald-50/60 via-cream-dark to-teal-50/40',
-  'Rice Bowls': 'from-yellow-50/60 via-cream-dark to-amber-50/40',
-  Waffles: 'from-rose-50/50 via-cream-dark to-orange-50/30',
-  Drinks: 'from-sky-50/50 via-cream-dark to-indigo-50/30',
+  'Dumplings (Fried)': 'from-amber-100/60 via-cream-dark to-orange-50/40',
+  'Dumplings (Steamed)': 'from-emerald-50/50 via-cream-dark to-sage/30',
+  'Dumplings (Boiled)': 'from-sky-50/40 via-cream-dark to-blue-50/30',
+  'Hand-Pulled Noodles': 'from-yellow-50/60 via-cream-dark to-amber-50/40',
+  'Mutton & Lamb': 'from-rose-50/40 via-cream-dark to-orange-50/30',
+  'Rice Dishes': 'from-stone-100/60 via-cream-dark to-stone-50/40',
+  'Drinks': 'from-indigo-50/40 via-cream-dark to-sky-50/30',
 };
 
 function MenuPlaceholder({ category }: { category: string }) {
@@ -97,7 +102,7 @@ export default function MenuTabs() {
       {/* Filter chips */}
       <div className="max-w-7xl mx-auto px-5 md:px-8 pt-8 pb-3">
         <div className="flex gap-2 flex-wrap">
-          {(['popular', 'new'] as Tag[]).map((tag) => (
+          {(['popular', 'new', 'signature'] as Tag[]).map((tag) => (
             <button
               key={tag}
               onClick={() => toggleFilter(tag)}
@@ -107,7 +112,7 @@ export default function MenuTabs() {
                   : 'bg-transparent text-taupe border-charcoal/10 hover:border-charcoal/25 hover:scale-105'
               }`}
             >
-              {tag}
+              {tag === 'signature' ? 'Signature 招牌' : tag}
             </button>
           ))}
         </div>

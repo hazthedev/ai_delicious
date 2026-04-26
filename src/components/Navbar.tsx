@@ -6,7 +6,7 @@ import site from '../data/site.json';
 const navLinks = [
   { label: 'Home', href: '/' },
   { label: 'Menu', href: '/menu' },
-  { label: 'About', href: '/about' },
+  { label: 'Story', href: '/about' },
 ];
 
 function WhatsAppIcon({ size = 18 }: { size?: number }) {
@@ -66,7 +66,7 @@ export default function Navbar() {
             {/* Logo */}
             <a href="/" className="flex items-center gap-3 group">
               <span className="font-zh text-gold text-xl md:text-2xl tracking-wide transition-transform duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:scale-105">
-                爱品味
+                三合园
               </span>
               <span className="hidden sm:block w-px h-4 bg-taupe/20" />
               <span
@@ -74,7 +74,7 @@ export default function Navbar() {
                   scrolled ? 'text-charcoal' : 'text-white/90'
                 }`}
               >
-                Ai Delicious
+                Sunny Garden
               </span>
             </a>
 
@@ -133,7 +133,7 @@ export default function Navbar() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, ease: [0.34, 1.56, 0.64, 1] }}
               >
-                爱品味
+                三合园
               </motion.span>
               <div className="w-8 h-px bg-gold/30 mb-2" />
               {navLinks.map((link, i) => (

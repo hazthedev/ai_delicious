@@ -9,13 +9,12 @@ import site from '../data/site.json';
 
 <BaseLayout
   title={`Menu | ${site.name} | ${site.nameZh}`}
-  description="Explore our menu — Western mains, pasta, rice bowls, signature waffles & desserts. Dine-in & delivery in Setapak."
+  description="Explore our menu — fried, steamed & boiled dumplings, hand-pulled noodles, mutton dishes & more. Chinese-Muslim cuisine in PV128 Setapak."
 >
   <Navbar client:load transition:persist />
 
   <!-- Menu Hero -->
   <section class="relative pt-32 pb-20 md:pt-44 md:pb-28 bg-charcoal overflow-hidden">
-    {/* Background texture */}
     <div class="absolute inset-0 opacity-[0.02]" style="background-image: radial-gradient(circle at 1px 1px, #FAF6F0 1px, transparent 0); background-size: 32px 32px;" />
     <div class="absolute top-0 right-0 w-[32rem] h-[32rem] bg-gold/4 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" />
     <div class="absolute bottom-0 left-0 w-96 h-96 bg-gold/3 rounded-full blur-3xl -translate-x-1/3 translate-y-1/3" />
@@ -24,11 +23,11 @@ import site from '../data/site.json';
       <div class="max-w-2xl">
         <p class="overline mb-6">Our Menu</p>
         <h1 class="font-display text-cream text-[2rem] md:text-5xl lg:text-6xl leading-[1.05] tracking-tight mb-6" style="font-variation-settings: 'opsz' 60;">
-          Fresh, made-to-order,<br />
-          <span class="text-gold">every single day.</span>
+          Fried, steamed, boiled.<br />
+          <span class="text-gold">Your choice.</span>
         </h1>
         <p class="text-cream/40 text-base md:text-lg max-w-md leading-relaxed">
-          Every dish crafted with care. From hearty mains to indulgent waffles — there is something for everyone at the table.
+          Three preparations of dumplings. Hand-pulled noodles. Mutton & lamb. All made with care, the Chinese-Muslim way.
         </p>
       </div>
     </div>
@@ -43,7 +42,7 @@ import site from '../data/site.json';
       <h2 class="font-display text-3xl md:text-4xl lg:text-5xl text-charcoal leading-[1.1] tracking-tight mb-5" style="font-variation-settings: 'opsz' 40;">
         Ready to order?
       </h2>
-      <p class="text-taupe mb-10 max-w-md mx-auto leading-relaxed">
+      <p class="text-taupe mb-8 md:mb-10 max-w-md mx-auto leading-relaxed">
         Chat with us on WhatsApp for the fastest response, or order through your favourite delivery app.
       </p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
