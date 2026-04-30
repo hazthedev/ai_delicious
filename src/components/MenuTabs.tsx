@@ -25,13 +25,13 @@ const categoryIcons: Record<string, React.ElementType> = {
 };
 
 const categoryGradients: Record<string, string> = {
-  'Dumplings (Fried)': 'from-amber-100/60 via-cream-dark to-orange-50/40',
-  'Dumplings (Steamed)': 'from-emerald-50/50 via-cream-dark to-sage/30',
-  'Dumplings (Boiled)': 'from-sky-50/40 via-cream-dark to-blue-50/30',
-  'Hand-Pulled Noodles': 'from-yellow-50/60 via-cream-dark to-amber-50/40',
-  'Mutton & Lamb': 'from-rose-50/40 via-cream-dark to-orange-50/30',
-  'Rice Dishes': 'from-stone-100/60 via-cream-dark to-stone-50/40',
-  'Drinks': 'from-indigo-50/40 via-cream-dark to-sky-50/30',
+  'Dumplings (Fried)': 'from-green-50/60 via-cream-dark to-emerald-50/40',
+  'Dumplings (Steamed)': 'from-emerald-50/50 via-cream-dark to-green-50/30',
+  'Dumplings (Boiled)': 'from-teal-50/40 via-cream-dark to-emerald-50/30',
+  'Hand-Pulled Noodles': 'from-lime-50/50 via-cream-dark to-green-50/30',
+  'Mutton & Lamb': 'from-stone-100/50 via-cream-dark to-green-50/20',
+  'Rice Dishes': 'from-amber-50/40 via-cream-dark to-green-50/20',
+  'Drinks': 'from-sky-50/40 via-cream-dark to-teal-50/30',
 };
 
 function MenuPlaceholder({ category }: { category: string }) {

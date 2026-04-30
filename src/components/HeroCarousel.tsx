@@ -8,13 +8,13 @@ interface Slide {
 
 const slides: Slide[] = [
   {
-    gradient: 'bg-gradient-to-br from-charcoal via-charcoal-light to-charcoal',
+    gradient: 'bg-gradient-to-br from-[#2a3025] via-[#3a4535] to-[#2a3025]',
   },
   {
-    gradient: 'bg-gradient-to-br from-charcoal via-[#3d3228] to-charcoal',
+    gradient: 'bg-gradient-to-br from-[#2d3028] via-[#3d4a35] to-[#2d3028]',
   },
   {
-    gradient: 'bg-gradient-to-br from-[#2d2420] via-charcoal to-[#1f1916]',
+    gradient: 'bg-gradient-to-br from-[#252e22] via-[#354230] to-[#252e22]',
   },
 ];
 

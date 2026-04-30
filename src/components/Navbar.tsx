@@ -53,7 +53,7 @@ export default function Navbar() {
       <motion.nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-[cubic-bezier(0.25,0.1,0.25,1)] ${
           scrolled
-            ? 'bg-cream/85 backdrop-blur-2xl shadow-[0_1px_0_rgba(176,141,87,0.1)]'
+            ? 'bg-cream/85 backdrop-blur-2xl shadow-[0_1px_0_rgba(93,122,78,0.15)]'
             : 'bg-transparent'
         }`}
         style={{ viewTransitionName: 'navbar' } as React.CSSProperties}
